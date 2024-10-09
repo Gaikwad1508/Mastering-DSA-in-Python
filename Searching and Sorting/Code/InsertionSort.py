@@ -1,13 +1,18 @@
-def SelectionSort(lst):
+def InsertionSort(lst):
     n = len(lst)
-    for i in range(n-1):
-        min_index = i
-        for j in range(i+1, n):
-            if lst[j] < lst[min_index]:
-                min_index = j
-        lst[i], lst[min_index] = lst[min_index], lst[i]
+    for current in range(1, n):
+        correctCard = lst[current]
+        currentPosition = current - 1     #It will go from i-1 to 0
+
+        while currentPosition >= 0:
+            if correctCard > lst[currentPosition]:
+                break
+            else:
+                lst[currentPosition + 1] = lst[currentPosition]
+                currentPosition -= 1
+        lst[currentPosition + 1] = correctCard 
     return lst
 
-unsorted_lst = [8, 6, 41, 34, 52, 1]
-result = SelectionSort(unsorted_lst)
+unsorted_lst = [34, 32, 99929, 2388, 32, 00, 124]
+result = InsertionSort(unsorted_lst)
 print(result)
