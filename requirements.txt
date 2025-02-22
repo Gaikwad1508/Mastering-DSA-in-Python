@@ -1,1 +1,2 @@
 ipykernel
+python 3.12
