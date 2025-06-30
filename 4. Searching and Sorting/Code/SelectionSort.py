@@ -8,6 +8,6 @@ def SelectionSort(lst):
         lst[i], lst[min_index] = lst[min_index], lst[i]
     return lst
 
-unsorted_lst = [8, 6, 41, 34, 52, 1]
+unsorted_lst = [-8, 6, 41, 34, 52, 1]
 result = SelectionSort(unsorted_lst)
 print(result)
